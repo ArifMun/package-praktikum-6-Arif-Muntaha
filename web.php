@@ -22,21 +22,7 @@ use App\Http\Controllers\MenuController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/masakan', function () {
-    return view('menu-masakan');
-});
-Route::get('/tampil_mahasiswa', function () {
-    return view('data-mahasiswa');
-});
-Route::get('/daftar-mahasiswa', [MahasiswaController::class, 'index']);
-Route::get('/data-buku', [DatabukuController::class, 'index']);
-Route::get('/form-isidata', [FormController::class, 'index']);
-//data barang
-Route::get('/daftar-barang', [BarangController::class, 'data']);
-//latian
-// Route::get('/guru/{nama}', [GuruController::class, 'index']);
-// Route::get('/formulir', [GuruController::class, 'formulir']);
-// Route::post('/formulir/proses', [GuruController::class, 'formulir_proses']);
+
 //data makanan
 Route::get('/pilihmenu', [MenuController::class, 'formulir_proses']);
 Route::get('/formulir', [MenuController::class, 'formulir']);
