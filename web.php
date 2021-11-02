@@ -23,6 +23,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//nomer 1 
+Route::get('/guru/{nama}', [GuruController::class, 'index']);
+Route::get('/formulir', [GuruController::class, 'formulir']);
+Route::post('/formulir/proses', [GuruController::class, 'formulir_proses']);
 //data makanan
 Route::get('/pilihmenu', [MenuController::class, 'formulir_proses']);
 Route::get('/formulir', [MenuController::class, 'formulir']);
